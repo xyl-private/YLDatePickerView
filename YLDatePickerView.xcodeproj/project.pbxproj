@@ -33,6 +33,7 @@
 		7BD26D0D20EDF6DE0021277A /* LYSDatePickerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD26CFA20EDF6DE0021277A /* LYSDatePickerLabel.m */; };
 		7BD26D0E20EDF6DE0021277A /* LYSDateLogicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD26CFD20EDF6DE0021277A /* LYSDateLogicViewController.m */; };
 		7BD26D0F20EDF6DE0021277A /* LYSDateHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD26CFE20EDF6DE0021277A /* LYSDateHeaderViewController.m */; };
+		7BD26D1220EE07C30021277A /* NSDate+YLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD26D1120EE07C20021277A /* NSDate+YLDate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,8 @@
 		7BD26CFC20EDF6DE0021277A /* LYSDatePickerTypeDayAndTimeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSDatePickerTypeDayAndTimeDelegate.h; sourceTree = "<group>"; };
 		7BD26CFD20EDF6DE0021277A /* LYSDateLogicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSDateLogicViewController.m; sourceTree = "<group>"; };
 		7BD26CFE20EDF6DE0021277A /* LYSDateHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSDateHeaderViewController.m; sourceTree = "<group>"; };
+		7BD26D1020EE07C20021277A /* NSDate+YLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YLDate.h"; sourceTree = "<group>"; };
+		7BD26D1120EE07C20021277A /* NSDate+YLDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YLDate.m"; sourceTree = "<group>"; };
 		A67B48E3CD9A51F49D92DF07 /* Pods-YLDatePickerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLDatePickerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-YLDatePickerView/Pods-YLDatePickerView.release.xcconfig"; sourceTree = "<group>"; };
 		AC7B9753AB149A75AD91AC4C /* Pods-YLDatePickerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLDatePickerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YLDatePickerView/Pods-YLDatePickerView.debug.xcconfig"; sourceTree = "<group>"; };
 		FD92BB82C63F9D3B1AFA2E65 /* libPods-YLDatePickerView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YLDatePickerView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +167,8 @@
 				7BD26C7620EDF5FB0021277A /* AppDelegate.m */,
 				7BD26C7820EDF5FB0021277A /* ViewController.h */,
 				7BD26C7920EDF5FB0021277A /* ViewController.m */,
+				7BD26D1020EE07C20021277A /* NSDate+YLDate.h */,
+				7BD26D1120EE07C20021277A /* NSDate+YLDate.m */,
 				7BD26CA720EDF65A0021277A /* LYSDatePickerController */,
 				7BD26C7B20EDF5FB0021277A /* Main.storyboard */,
 				7BD26C7E20EDF5FC0021277A /* Assets.xcassets */,
@@ -441,6 +446,7 @@
 				7BD26D0920EDF6DE0021277A /* LYSDatePickerController.m in Sources */,
 				7BD26D0720EDF6DE0021277A /* LYSDatePickerTypeTimeDelegate.m in Sources */,
 				7BD26C8520EDF5FC0021277A /* main.m in Sources */,
+				7BD26D1220EE07C30021277A /* NSDate+YLDate.m in Sources */,
 				7BD26D0F20EDF6DE0021277A /* LYSDateHeaderViewController.m in Sources */,
 				7BD26D0820EDF6DE0021277A /* LYSDateBaseViewController.m in Sources */,
 				7BD26D0020EDF6DE0021277A /* LYSDateContentView.m in Sources */,

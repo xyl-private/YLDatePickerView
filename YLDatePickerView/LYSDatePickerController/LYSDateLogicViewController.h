@@ -25,6 +25,12 @@ typedef enum : NSUInteger {
 @property (nonatomic,assign)int fromYear;
 // 日期结束时间
 @property (nonatomic,assign)int toYear;
+
+// 日期开始时间
+@property (nonatomic,strong) NSDate * minimumDate;
+// 日期结束时间
+@property (nonatomic,strong) NSDate * maximumDate;
+
 // 默认选中日期
 @property (nonatomic,strong)NSDate *selectDate;
 // 选择器类型

@@ -7,7 +7,7 @@
 //
 
 #import "LYSDateLogicViewController.h"
-
+#import "NSDate+YLDate.h"
 #define IS5SBOOL CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(320, 568))
 #define IS6SBOOL CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(375, 667))
 #define IS6SPBOOL CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(414, 736))
@@ -29,6 +29,8 @@
     if (self) {
         self.fromYear = 1970;                                 // 默认开始年份
         self.toYear = 2070;                                   // 默认结束年份
+        self.minimumDate = [NSDate date];
+//        self.maximumDate = [NSDate d];
         self.pickType = LYSDatePickerTypeDayAndTime;          // 默认选择器类型
         self.selectDate = [NSDate date];                      // 默认选中日期
     }
