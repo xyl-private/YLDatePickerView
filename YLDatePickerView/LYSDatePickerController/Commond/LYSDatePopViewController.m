@@ -33,9 +33,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    //    self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
-    //    self.view.alpha = 0;
     // 设置内容视图
     [self initContentView];
 }
