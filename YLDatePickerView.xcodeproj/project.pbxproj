@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51B76D58C83C1A651AF9199F /* libPods-YLDatePickerView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD92BB82C63F9D3B1AFA2E65 /* libPods-YLDatePickerView.a */; };
+		7B94198920F1E6A900811329 /* YLDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B94198820F1E6A900811329 /* YLDatePickerViewController.m */; };
 		7BD26C7720EDF5FB0021277A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD26C7620EDF5FB0021277A /* AppDelegate.m */; };
 		7BD26C7A20EDF5FB0021277A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD26C7920EDF5FB0021277A /* ViewController.m */; };
 		7BD26C7D20EDF5FB0021277A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD26C7B20EDF5FB0021277A /* Main.storyboard */; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B94198720F1E6A900811329 /* YLDatePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLDatePickerViewController.h; sourceTree = "<group>"; };
+		7B94198820F1E6A900811329 /* YLDatePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLDatePickerViewController.m; sourceTree = "<group>"; };
 		7BD26C7220EDF5FB0021277A /* YLDatePickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLDatePickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD26C7520EDF5FB0021277A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7BD26C7620EDF5FB0021277A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				7BD26C7620EDF5FB0021277A /* AppDelegate.m */,
 				7BD26C7820EDF5FB0021277A /* ViewController.h */,
 				7BD26C7920EDF5FB0021277A /* ViewController.m */,
+				7B94198720F1E6A900811329 /* YLDatePickerViewController.h */,
+				7B94198820F1E6A900811329 /* YLDatePickerViewController.m */,
 				7BD26D1020EE07C20021277A /* NSDate+YLDate.h */,
 				7BD26D1120EE07C20021277A /* NSDate+YLDate.m */,
 				7BD26CA720EDF65A0021277A /* LYSDatePickerController */,
@@ -200,6 +205,12 @@
 		7BD26CA720EDF65A0021277A /* LYSDatePickerController */ = {
 			isa = PBXGroup;
 			children = (
+				7BD26CE520EDF6DC0021277A /* LYSDatePickerManager.h */,
+				7BD26CE020EDF6DC0021277A /* LYSDatePickerManager.m */,
+				7BD26CE620EDF6DC0021277A /* LYSDatePickerTypeBase.h */,
+				7BD26CF620EDF6DD0021277A /* LYSDatePickerTypeBase.m */,
+				7BD26CFC20EDF6DE0021277A /* LYSDatePickerTypeDayAndTimeDelegate.h */,
+				7BD26CF220EDF6DD0021277A /* LYSDatePickerTypeDayAndTimeDelegate.m */,
 				7BD26CF020EDF6DD0021277A /* LYSDateBaseViewController.h */,
 				7BD26CEF20EDF6DD0021277A /* LYSDateBaseViewController.m */,
 				7BD26CFB20EDF6DE0021277A /* LYSDateBasicViewController.h */,
@@ -220,13 +231,7 @@
 				7BD26CEC20EDF6DD0021277A /* LYSDatePickerItem.m */,
 				7BD26CF520EDF6DD0021277A /* LYSDatePickerLabel.h */,
 				7BD26CFA20EDF6DE0021277A /* LYSDatePickerLabel.m */,
-				7BD26CE520EDF6DC0021277A /* LYSDatePickerManager.h */,
-				7BD26CE020EDF6DC0021277A /* LYSDatePickerManager.m */,
 				7BD26CE920EDF6DC0021277A /* LYSDatePickerSelectDelegate.h */,
-				7BD26CE620EDF6DC0021277A /* LYSDatePickerTypeBase.h */,
-				7BD26CF620EDF6DD0021277A /* LYSDatePickerTypeBase.m */,
-				7BD26CFC20EDF6DE0021277A /* LYSDatePickerTypeDayAndTimeDelegate.h */,
-				7BD26CF220EDF6DD0021277A /* LYSDatePickerTypeDayAndTimeDelegate.m */,
 				7BD26CDC20EDF6DC0021277A /* LYSDatePickerTypeDayDelegate.h */,
 				7BD26CDD20EDF6DC0021277A /* LYSDatePickerTypeDayDelegate.m */,
 				7BD26CE320EDF6DC0021277A /* LYSDatePickerTypeTimeDelegate.h */,
@@ -443,6 +448,7 @@
 				7BD26D0320EDF6DE0021277A /* LYSDatePickerHeaderView.m in Sources */,
 				7BD26D0C20EDF6DE0021277A /* LYSDatePickerViewController.m in Sources */,
 				7BD26D0E20EDF6DE0021277A /* LYSDateLogicViewController.m in Sources */,
+				7B94198920F1E6A900811329 /* YLDatePickerViewController.m in Sources */,
 				7BD26D0920EDF6DE0021277A /* LYSDatePickerController.m in Sources */,
 				7BD26D0720EDF6DE0021277A /* LYSDatePickerTypeTimeDelegate.m in Sources */,
 				7BD26C8520EDF5FC0021277A /* main.m in Sources */,

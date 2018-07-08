@@ -45,23 +45,27 @@
  1：dateB比dateA大；
  */
 + (NSInteger)yl_compareDateA:(NSString *)dateA DateB:(NSString *)dateB DateFormatter:(NSString *)dateFormatter;
-
-
 /**
- 比较日期是否相等
- @return return YES 相等  NO 不等
+ dateA 与 dateB 的时间格式是相同的
+ * 时间比较：1：dateA -> dateB  a 小于 b
+ 0：dateA == dateB
+ -1：dateA <- dateB  a 大于 b
  */
-+ (BOOL)yl_isEqual:(NSDate *)dateA other:(NSDate *)dateB DateFormatter:(NSString *)dateFormat;
++ (NSInteger)yl_compareNSDateA:(NSDate *)dateA DateB:(NSDate *)dateB;
 /**
- 给定日期时间 判断是不是今天的当前时间
+ 以给定时间为基准, 距离这个时间前后N个月的时间
+ Distance N months before and after this time
+ @param date 基准时间
+ @param num  N 个月
+ */
+- (NSDate *)yl_dateIntervalMonthsDate:(NSDate *)date withNumber:(NSInteger)num;
+
+/**
+ 将 NSDate 转成 NSDateComponents 类型
  
- @param date 给定日期
+ @param date 给定的 date
  */
-+ (BOOL)yl_isCurrentDate:(NSDate *)date DateFormatter:(NSString *)dateFormat;
-/**
- 判断给定时间是不是今天
- */
-+ (BOOL)yl_isToday:(NSDate *)date;
++ (NSDateComponents *)yl_dateComponentsWithDate:(NSDate *)date;
 
 /**
  获取给定日期的月份
@@ -83,4 +87,21 @@
  @param date 给定日期
  */
 + (NSInteger)yl_numberWeeksInMonthWithDate:(NSDate*)date;
+
+#pragma mark - 
+/**
+ 比较日期是否相等
+ @return return YES 相等  NO 不等
+ */
++ (BOOL)yl_isEqual:(NSDate *)dateA other:(NSDate *)dateB DateFormatter:(NSString *)dateFormat;
+/**
+ 给定日期时间 判断是不是今天的当前时间
+ 
+ @param date 给定日期
+ */
++ (BOOL)yl_isCurrentDate:(NSDate *)date DateFormatter:(NSString *)dateFormat;
+/**
+ 判断给定时间是不是今天
+ */
++ (BOOL)yl_isToday:(NSDate *)date;
 @end

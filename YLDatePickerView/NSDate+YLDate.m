@@ -48,8 +48,8 @@
 
 /**
  * 时间比较：-1：dateB比dateA小
-            0：相等；
-            1：dateB比dateA大；
+ 0：相等；
+ 1：dateB比dateA大；
  */
 + (NSInteger)yl_compareDateA:(NSString *)dateA DateB:(NSString *)dateB DateFormatter:(NSString *)dateFormat
 {
@@ -60,6 +60,25 @@
     NSDate *dta = [dateformater dateFromString:dateA];
     NSDate *dtb = [dateformater dateFromString:dateB];
     NSComparisonResult result = [dta compare:dtb];
+    if (result == NSOrderedSame) {
+        aa = 0;
+    } else if (result == NSOrderedAscending) {//上升
+        aa = 1;
+    } else if (result == NSOrderedDescending) {//下降
+        aa = -1;
+    }
+    return aa;
+}
+
+/**
+ * 时间比较：1：dateA -> dateB  a 小于 b
+           0：dateA == dateB
+          -1：dateA <- dateB  a 大于 b
+ */
++ (NSInteger)yl_compareNSDateA:(NSDate *)dateA DateB:(NSDate *)dateB
+{
+    NSInteger aa = 0;
+    NSComparisonResult result = [dateA compare:dateB];
     if (result == NSOrderedSame) {
         aa = 0;
     } else if (result == NSOrderedAscending) {
@@ -82,7 +101,7 @@
 
 /**
  给定日期时间 判断是不是今天的当前时间
-
+ 
  @param date 给定日期
  */
 + (BOOL)yl_isCurrentDate:(NSDate *)date DateFormatter:(NSString *)dateFormat{
@@ -98,7 +117,7 @@
 
 /**
  获取给定日期的月份
-
+ 
  @param date 给定日期
  */
 + (NSInteger)yl_monthFromDate:(NSDate *)date
@@ -125,12 +144,42 @@
  @param date 基准时间
  @param num  N 个月
  */
--(NSDate *)yl_dateIntervalMonthsDate:(NSDate *)date withNumber:(NSInteger)num{
+- (NSDate *)yl_dateIntervalMonthsDate:(NSDate *)date withNumber:(NSInteger)num{
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     [comps setMonth:num];
     NSCalendar *calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate *mDate = [calender dateByAddingComponents:comps toDate:date options:0];
     return mDate;
+}
+
+/**
+ 将 NSDate 转成 NSDateComponents 类型
+ 
+ @param date 给定的 date
+ */
++ (NSDateComponents *)yl_dateComponentsWithDate:(NSDate *)date{
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];//当前用户的calendar
+    
+    NSDateComponents * components = [calendar components:
+                                     NSCalendarUnitEra |
+                                     NSCalendarUnitYear |
+                                     NSCalendarUnitMonth |
+                                     NSCalendarUnitDay |
+                                     NSCalendarUnitHour |
+                                     NSCalendarUnitMinute |
+                                     NSCalendarUnitSecond |
+                                     NSCalendarUnitWeekday |
+                                     NSCalendarUnitWeekdayOrdinal |
+                                     NSCalendarUnitWeekOfMonth |
+                                     NSCalendarUnitWeekOfYear |
+                                     NSCalendarUnitNanosecond |
+                                     NSCalendarUnitCalendar |
+                                     NSCalendarUnitTimeZone |
+                                     NSCalendarUnitYearForWeekOfYear |
+                                     NSCalendarUnitQuarter
+                                                fromDate:date];
+    return components;
 }
 
 #pragma mark - 通用

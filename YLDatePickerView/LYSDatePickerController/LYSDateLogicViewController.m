@@ -29,8 +29,8 @@
     if (self) {
         self.fromYear = 1970;                                 // 默认开始年份
         self.toYear = 2070;                                   // 默认结束年份
-        self.minimumDate = [NSDate date];
-//        self.maximumDate = [NSDate d];
+        self.minimumDate = [NSDate yl_dateFromDateString:@"1970-1-1 00:00:00" DateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        self.maximumDate = [NSDate yl_dateFromDateString:@"4000-12-31 23:59:59" DateFormat:@"yyyy-MM-dd HH:mm:ss"];
         self.pickType = LYSDatePickerTypeDayAndTime;          // 默认选择器类型
         self.selectDate = [NSDate date];                      // 默认选中日期
     }
@@ -88,6 +88,10 @@
     
     self.typeBase.fromYear = self.fromYear;
     self.typeBase.toYear = self.toYear;
+    
+    self.typeBase.minimumDate = self.minimumDate;
+    self.typeBase.maximumDate = self.maximumDate;
+    
     self.typeBase.titleLabel = self.subLabel;
     
     self.typeBase.yearLoop = self.yearLoop;

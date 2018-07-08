@@ -28,6 +28,11 @@ typedef enum : NSUInteger {
 // 日期结束时间
 @property (nonatomic,assign)int toYear;
 
+// 日期开始时间
+@property (nonatomic,strong) NSDate * minimumDate;
+// 日期结束时间
+@property (nonatomic,strong) NSDate * maximumDate;
+
 @property(nonatomic, weak)UILabel *titleLabel;
 
 @property (nonatomic,assign)int currentYear;
